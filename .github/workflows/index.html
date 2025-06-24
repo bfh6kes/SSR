@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brown-Forman</title>
+    <script type="text/javascript">
+        // Function to start the countdown and redirect after 10 seconds
+        function startCountdown() {
+            var countdownElement = document.getElementById("countdown");
+            var timeLeft = 10;
+
+            var timer = setInterval(function() {
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    window.location.href = "https://myapps.microsoft.com/b-f.com";
+                } else {
+                    countdownElement.innerHTML = timeLeft;
+                }
+                timeLeft -= 1;
+            }, 1000); // 1000 milliseconds = 1 second
+        }
+    </script>
+</head>
+<body onload="startCountdown()">
+    <h1>Brown-Forman</h1>
+    <p>Redirecting to Brown-Forman's Microsoft Apps page in <span id="countdown">10</span> seconds...</p>
+</body>
+</html>
